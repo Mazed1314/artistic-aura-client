@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const AddCraft = () => {
+  const { user } = useContext(AuthContext);
+
   const handleAddCraft = (event) => {
     event.preventDefault();
 
@@ -15,6 +19,7 @@ const AddCraft = () => {
     const processing_time = form.processing_time.value;
     const customization = form.customization.value;
     const photo = form.photo.value;
+    const email = user.email;
 
     const addNewItem = {
       item_name,
@@ -26,12 +31,13 @@ const AddCraft = () => {
       processing_time,
       customization,
       photo,
+      email,
     };
 
     console.log(addNewItem);
 
     // send data to the server
-    fetch("http://localhost:5000/craft", {
+    fetch("https://artistic-aura-server.vercel.app/addCraft", {
       method: "POST",
       headers: {
         "content-type": "application/json",

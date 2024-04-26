@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 import AuthProvider from "./Providers/AuthProvider";
 import Login from "./Components/Pages/Login";
 import AddCraft from "./Components/AddCraft";
+import MyCraft from "./Components/Pages/MyCraft";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/craft"),
+        loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
       },
       {
         path: "/register",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/add-craft",
         element: <AddCraft></AddCraft>,
+      },
+      {
+        path: "/my-craft",
+        element: <MyCraft></MyCraft>,
       },
     ],
   },

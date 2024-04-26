@@ -1,6 +1,20 @@
-const Craft = () => {
-  console.log(craft);
-  //   const { item_name } = craft;
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+
+const Craft = ({ craft }) => {
+  const { user } = useContext(AuthContext);
+
+  const {
+    item_name,
+    subcategory_name,
+    short_description,
+    stock_status,
+    price,
+    rating,
+    processing_time,
+    customization,
+    photo,
+  } = craft;
   return (
     <div>
       <div className=" mx-auto my-6 max-w-[350px] rounded-lg bg-white font-sans shadow-lg dark:bg-[#18181B]">
@@ -15,7 +29,7 @@ const Craft = () => {
               alt="card navigate ui"
             />
             <div className="flex flex-col">
-              <h2 className="text-xl font-semibold">{craft.item_name}</h2>
+              <h2 className="text-xl font-semibold">{user.displayName}</h2>
               <p className="text-gray-400">2 days ago</p>
             </div>
           </div>
@@ -57,11 +71,10 @@ const Craft = () => {
         {/* Post content */}
         <div className="mt-3 space-y-2 px-4">
           <h2 className="text-xl font-semibold text-slate-800 dark:text-white/90">
-            My new paintings
+            {item_name}
           </h2>
           <h2 className="text-sm text-gray-500 dark:text-white/50">
-            Hey, I captured some picture recently. You can check it and share
-            you thoughts with me. I want to listen your thoughts...{" "}
+            {short_description}{" "}
             <span className="cursor-pointer text-[#3e96d4]">See more</span>
           </h2>
         </div>

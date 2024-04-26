@@ -1,4 +1,3 @@
-import Craft from "../Craft";
 import CraftItemSection from "../CraftItemSection";
 
 const Home = () => {
