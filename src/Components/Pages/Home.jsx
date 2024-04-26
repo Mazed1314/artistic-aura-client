@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <div className="">
         <div className="">
-          <h2 className="p-4 py-8 md:w-1/2 mx-auto  text-5xl font-light">
+          <h2 className="p-4 py-8 md:w-2/3 mx-auto text-center md:text-start text-3xl md:text-5xl font-light">
             Being creative is not a hobby, it is a way of life for every artist
           </h2>
         </div>

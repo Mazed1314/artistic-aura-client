@@ -2,20 +2,17 @@ import PropTypes from "prop-types";
 const Craft = ({ craft }) => {
   const {
     item_name,
-    subcategory_name,
+
     short_description,
-    stock_status,
-    price,
-    rating,
-    processing_time,
-    customization,
-    photo,
   } = craft;
   return (
-    <div>
-      <div className="card w-96 glass">
+    <div className="">
+      <div className="card md:w-72 glass">
         <figure>
-          <img src={photo} alt="image" />
+          <img
+            src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid05_9c76563b-22d5-4f80-bbd1-1aa9ed68b7b6.jpg?v=1658894831"
+            alt="image"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{item_name}</h2>
