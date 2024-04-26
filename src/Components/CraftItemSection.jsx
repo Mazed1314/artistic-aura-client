@@ -4,7 +4,7 @@ import Craft from "./Craft";
 const CraftItemSection = () => {
   const getCraft = useLoaderData();
   return (
-    <div className="flex flex-grow gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {getCraft.map((craft) => (
         <>
           <Craft key={craft._id} craft={craft}></Craft>
