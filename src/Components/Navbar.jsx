@@ -32,7 +32,7 @@ const Navbar = () => {
         className={({ isActive }) =>
           isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
         }
-        to="/add"
+        to="/add-craft"
       >
         Add Craft Item
       </NavLink>
@@ -95,11 +95,7 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="">
-            <img
-              src="Images/LandLux-removebg-preview.png"
-              className="w-48"
-              alt=""
-            />
+            <img src="" className="w-48" alt="" />
           </a>
         </div>
         <div className="navbar-center hidden md:flex">
@@ -147,13 +143,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="btn border-sky-500 bg-transparent text-sky-500 btn-xs md:btn-sm mr-2"
+                className="btn border-orange-500 bg-transparent text-black btn-xs md:btn-sm mr-2"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn border-black text-black bg-transparent btn-xs md:btn-sm"
+                className="btn border-rose-500 text-black bg-transparent btn-xs md:btn-sm"
               >
                 Register
               </Link>

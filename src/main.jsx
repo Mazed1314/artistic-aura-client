@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Root from "./Components/Root";
+import Root from "./Components/Layout/Root";
 import ErrorPage from "./Components/Pages/ErrorPage";
 import Home from "./Components/Pages/Home";
 import Register from "./Components/Pages/Register";
 import { HelmetProvider } from "react-helmet-async";
 import AuthProvider from "./Providers/AuthProvider";
 import Login from "./Components/Pages/Login";
+import AddCraft from "./Components/AddCraft";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/craft"),
       },
       {
         path: "/register",
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/add-craft",
+        element: <AddCraft></AddCraft>,
       },
     ],
   },

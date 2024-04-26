@@ -7,15 +7,15 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-cyan-300 to-cyan-600 text-white py-12 pb-0 mx-0">
+    <footer className="bg-gradient-to-b from-rose-300 to-rose-600 text-white py-12 pb-0 mx-0">
       <div className="mx-auto px-2 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="mb-8">
             <h4 className="text-lg font-semibold mb-4 text-center">
-              About LandLuxe Realty
+              About Artistice Aura
             </h4>
             <p className="text-sm text-center">
-              LandLuxe Realty specializes in providing premium land real estate
+              Artistice Aura specializes in providing premium land real estate
               solutions to our clients. With a focus on integrity and
               professionalism, we strive to exceed expectations and deliver
               exceptional service tailored to individual needs.
@@ -26,9 +26,9 @@ const Footer = () => {
               Contact Us
             </h4>
             <p className="text-sm">
-              2312 LandLuxe Street, Chittagong, Bangladesh
+              2312 Artistice Street, Chittagong, Bangladesh
             </p>
-            <p className="text-sm">Email: landluxe@realty.com</p>
+            <p className="text-sm">Email: Artistice@aura.com</p>
             <p className="text-sm">Phone: +123-456-7890</p>
           </div>
           <div className="mb-8 ">
@@ -75,7 +75,7 @@ const Footer = () => {
       <div className="container mx-aut py-8 rounded-b-lg">
         <div className="flex justify-center">
           <p className="text-sm">
-            &copy; 2024 Landlux Realty. All rights reserved.
+            &copy; 2024 Artistic Aura. All rights reserved.
           </p>
         </div>
       </div>
