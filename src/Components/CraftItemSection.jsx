@@ -3,7 +3,7 @@ import Craft from "./Craft";
 
 const CraftItemSection = () => {
   const getCraft = useLoaderData();
-  const bg_img = "../../public/images/AC_UF1000,1000_QL80_.jpg";
+  const bg_img = "/images/AC_UF1000,1000_QL80_.jpg";
   return (
     <div
       style={{

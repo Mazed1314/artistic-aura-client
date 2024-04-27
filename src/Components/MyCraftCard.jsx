@@ -17,6 +17,7 @@ const MyCraftCard = ({ craft }) => {
     processing_time,
     stock_status,
     price,
+    photo,
   } = craft;
 
   const handleDelete = (_id) => {
@@ -31,7 +32,7 @@ const MyCraftCard = ({ craft }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/myCraft/${_id}`, {
+        fetch(`https://artistic-aura-server.vercel.app/craft/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,7 +48,7 @@ const MyCraftCard = ({ craft }) => {
 
   return (
     <div>
-      <div className="mx-auto my-6 md:w-[350px] md:h-[500px] rounded-lgfont-sans border">
+      <div className="mx-auto my-6 md:w-[350px] rounded font-sans border border-pink-800">
         <div className="flex justify-between py-4 px-2">
           <div className="flex">
             {/* Avatar image  */}
@@ -57,7 +58,10 @@ const MyCraftCard = ({ craft }) => {
               alt=""
             />
             <div className="flex flex-col pl-2">
-              <h2 className="text-xl font-semibold">{user.displayName}'s</h2>
+              <h2 className="text-xl font-semibold">
+                {user.displayName}
+                {"'s"}
+              </h2>
               <h2>
                 <span className="text-lg text-slate-600 font-medium">
                   {subcategory_name}
@@ -67,9 +71,9 @@ const MyCraftCard = ({ craft }) => {
             </div>
           </div>
           <div className="flex cursor-pointer gap-2 rounded-full px-4 py-3">
-            <span className="">
+            <NavLink to={`/updateCraft/${_id}`} className="">
               <FaRegEdit className="bg-transparent text-3xl text-sky-500" />
-            </span>
+            </NavLink>
             <span
               onClick={() => handleDelete(_id)}
               className="bg-transparent border-0"
@@ -88,27 +92,22 @@ const MyCraftCard = ({ craft }) => {
 
         {/* Post image */}
         <div className="w-full">
-          <img
-            width={400}
-            height={200}
-            src="https://source.unsplash.com/400x200/?arts"
-            alt=""
-          />
+          <img width={400} height={200} src={photo} alt="Craft Image" />
         </div>
 
         {/* Post content */}
         <div className="mt-3 space-y-2 px-4">
           <h2 className="text-xl font-semibold">{item_name}</h2>
           <h2>Processing Time : {processing_time}h</h2>
-          <h2 className="text-sm">
-            {short_description.slice(0, 20)}
+          <h2 className="text-sm py-2">
+            {short_description.slice(0, 150)}
             {"... "}
           </h2>
         </div>
         <div className="flex justify-center">
           <NavLink
             to={`/view-details/${_id}`}
-            className="btn btn-sm rounded text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+            className="btn mb-3 btn-sm rounded text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
           >
             View Details
           </NavLink>

@@ -1,7 +1,7 @@
 const ModernArtSection = () => {
-  const img_1 = "../../public/images/blog01.webp";
-  const img_2 = "../../public/images/blog02.webp";
-  const img_3 = "../../public/images/blog03.webp";
+  const img_1 = "/images/blog01.webp";
+  const img_2 = "/images/blog02.webp";
+  const img_3 = "/images/blog03.webp";
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-8 py-4">

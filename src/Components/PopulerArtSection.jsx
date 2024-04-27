@@ -1,9 +1,9 @@
 const PopulerArtSection = () => {
-  const img_1 = "../../public/images/home04_600x.webp";
-  const img_2 = "../../public/images/Shop12_600x.webp";
-  const img_3 = "../../public/images/Shop11_600x.webp";
-  const img_4 = "../../public/images/Shop03_600x.webp";
-  const img_5 = "../../public/images/Shop04_600x.webp";
+  const img_1 = "/images/home04_600x.webp";
+  const img_2 = "/images/Shop12_600x.webp";
+  const img_3 = "/images/Shop11_600x.webp";
+  const img_4 = "/images/Shop03_600x.webp";
+  const img_5 = "/images/Shop04_600x.webp";
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-8 justify-center mb-4">

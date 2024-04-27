@@ -5,7 +5,7 @@ import MyCraftCard from "../MyCraftCard";
 const MyCraft = () => {
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
-  console.log(user);
+  // console.log(user);
   useEffect(() => {
     fetch(`https://artistic-aura-server.vercel.app/myCraft/${user?.email}`)
       .then((res) => res.json())

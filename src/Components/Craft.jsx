@@ -18,7 +18,7 @@ const Craft = ({ craft }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{item_name}</h2>
-          <p>{short_description}</p>
+          <p>{short_description.slice(0, 100)}...</p>
           <div className="card-actions justify-end">
             <NavLink
               to={`/view-details/${_id}`}

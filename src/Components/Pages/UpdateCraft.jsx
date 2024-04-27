@@ -1,14 +1,28 @@
 import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-import { AuthContext } from "../Providers/AuthProvider";
 
-const AddCraft = () => {
+const UpdateCraft = () => {
   const { user } = useContext(AuthContext);
+  const craft = useLoaderData();
+  const {
+    _id,
+    item_name,
+    subcategory_name,
+    short_description,
+    stock_status,
+    price,
+    rating,
+    processing_time,
+    customization,
+    photo,
+  } = craft;
 
-  const handleAddCraft = (event) => {
-    event.preventDefault();
+  const handleUpdateCraft = (e) => {
+    e.preventDefault();
 
-    const form = event.target;
+    const form = e.target;
 
     const item_name = form.item_name.value;
     const subcategory_name = form.subcategory_name.value;
@@ -21,7 +35,7 @@ const AddCraft = () => {
     const photo = form.photo.value;
     const email = user.email;
 
-    const addNewItem = {
+    const updatedItem = {
       item_name,
       subcategory_name,
       short_description,
@@ -34,23 +48,20 @@ const AddCraft = () => {
       email,
     };
 
-    console.log(addNewItem);
-
-    // send data to the server
-    fetch("https://artistic-aura-server.vercel.app/addCraft", {
-      method: "POST",
+    fetch(`https://artistic-aura-server.vercel.app/craft/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(addNewItem),
+      body: JSON.stringify(updatedItem),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Craft Added Successfully",
+            text: "Updated Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -61,10 +72,8 @@ const AddCraft = () => {
   return (
     <div>
       <div className="bg-gray-200 p-4 md:w-2/3 mx-auto rounded-t-md">
-        <h2 className="text-3xl text-center font-extrabold my-4">
-          Add a Craft Item
-        </h2>
-        <form onSubmit={handleAddCraft}>
+        <h2 className="text-3xl text-center font-semibold my-4">Edit Item</h2>
+        <form onSubmit={handleUpdateCraft}>
           {/* form item name and sub category name row */}
           <div className="md:flex mb-8">
             <div className="form-control md:w-1/2">
@@ -75,6 +84,7 @@ const AddCraft = () => {
                 <input
                   type="text"
                   name="item_name"
+                  defaultValue={item_name}
                   placeholder="item name"
                   className="input input-bordered w-full"
                 />
@@ -84,7 +94,11 @@ const AddCraft = () => {
               <label className="label">
                 <span className="label-text">Subcategory Name</span>
               </label>
-              <select name="subcategory_name" className="rounded-md">
+              <select
+                defaultValue={subcategory_name}
+                name="subcategory_name"
+                className="rounded-md"
+              >
                 <option value="Landscape Painting">Landscape Painting</option>
                 <option value="Portrait Drawing">Portrait Drawing</option>
                 <option value="Watercolour Painting">
@@ -105,6 +119,7 @@ const AddCraft = () => {
               <textarea
                 className="rounded-lg pl-3 pt-2"
                 name="short_description"
+                defaultValue={short_description}
                 placeholder="short description"
                 rows="4"
                 cols="50"
@@ -114,7 +129,11 @@ const AddCraft = () => {
               <label className="label">
                 <span className="label-text">Stock Status</span>
               </label>
-              <select name="stock_status" className="rounded-md">
+              <select
+                name="stock_status"
+                defaultValue={stock_status}
+                className="rounded-md"
+              >
                 <option value="In stock">In stock</option>
                 <option
                   value="Out of stock
@@ -134,6 +153,7 @@ const AddCraft = () => {
               <label className="input-group">
                 <input
                   type="number"
+                  defaultValue={price}
                   name="price"
                   placeholder="price"
                   className="input input-bordered w-full"
@@ -148,6 +168,7 @@ const AddCraft = () => {
                 <input
                   type="number"
                   name="rating"
+                  defaultValue={rating}
                   placeholder="rating"
                   className="input input-bordered w-full"
                 />
@@ -161,6 +182,7 @@ const AddCraft = () => {
                 <input
                   type="number"
                   name="processing_time"
+                  defaultValue={processing_time}
                   placeholder="processing time"
                   className="input input-bordered w-full"
                 />
@@ -170,7 +192,11 @@ const AddCraft = () => {
               <label className="label">
                 <span className="label-text">Customization</span>
               </label>
-              <select name="customization" className="rounded-md">
+              <select
+                name="customization"
+                defaultValue={customization}
+                className="rounded-md"
+              >
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
@@ -186,6 +212,7 @@ const AddCraft = () => {
                 <input
                   type="text"
                   name="photo"
+                  defaultValue={photo}
                   placeholder="Give image URL"
                   className="input input-bordered w-full"
                 />
@@ -201,4 +228,4 @@ const AddCraft = () => {
   );
 };
 
-export default AddCraft;
+export default UpdateCraft;
