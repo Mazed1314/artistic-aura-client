@@ -1,13 +1,15 @@
 const PopulerArtSection = () => {
+  const img_1 = "../../public/images/home04_600x.webp";
+  const img_2 = "../../public/images/Shop12_600x.webp";
+  const img_3 = "../../public/images/Shop11_600x.webp";
+  const img_4 = "../../public/images/Shop03_600x.webp";
+  const img_5 = "../../public/images/Shop04_600x.webp";
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-8 justify-center mb-4">
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img
-              src="https://dt-monaliza.myshopify.com/cdn/shop/products/home04_600x.jpg?v=1658476398"
-              alt="Shoes"
-            />
+            <img src={img_1} alt="Shoes" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Fantasy Art</h2>
@@ -21,10 +23,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img
-              src="https://dt-monaliza.myshopify.com/cdn/shop/products/Shop12_600x.jpg?v=1658476403"
-              alt="Shoes"
-            />
+            <img src={img_2} alt="Shoes" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Dragon Art</h2>
@@ -38,10 +37,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img
-              src="https://dt-monaliza.myshopify.com/cdn/shop/products/Shop11_600x.jpg?v=1658476406"
-              alt="Shoes"
-            />
+            <img src={img_3} alt="Shoes" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Impressionism Art</h2>
@@ -57,10 +53,7 @@ const PopulerArtSection = () => {
       <div className="flex flex-col md:flex-row gap-8 ">
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img
-              src="https://dt-monaliza.myshopify.com/cdn/shop/products/Shop03_600x.jpg?v=1658476421"
-              alt="Shoes"
-            />
+            <img src={img_4} alt="Shoes" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">ImageThink</h2>
@@ -74,10 +67,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2 md:w-96 bg-transparent">
           <figure>
-            <img
-              src="https://dt-monaliza.myshopify.com/cdn/shop/products/Shop04_600x.jpg?v=1658476420"
-              alt="Shoes"
-            />
+            <img src={img_5} alt="Shoes" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Fine Art Spot</h2>

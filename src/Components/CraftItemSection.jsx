@@ -3,19 +3,21 @@ import Craft from "./Craft";
 
 const CraftItemSection = () => {
   const getCraft = useLoaderData();
+  const bg_img = "../../public/images/AC_UF1000,1000_QL80_.jpg";
   return (
     <div
       style={{
-        backgroundImage:
-          "url('https://images.joseartgallery.com/100736/what-kind-of-art-is-popular-right-now.jpg')",
+        backgroundImage: `url(${bg_img})`,
       }}
-      className="grid grid-cols-1 md:grid-cols-3 gap-8 p-2 bg-cover bg-center min-h-screen bg-orange-300"
+      className="bg-no-repeat bg-cover min-h-screen"
     >
-      {getCraft.map((craft) => (
-        <>
-          <Craft key={craft._id} craft={craft}></Craft>
-        </>
-      ))}
+      <div className="w-2/3 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-2 py-8 md:py-20">
+        {getCraft.map((craft) => (
+          <>
+            <Craft key={craft._id} craft={craft}></Craft>
+          </>
+        ))}
+      </div>
     </div>
   );
 };

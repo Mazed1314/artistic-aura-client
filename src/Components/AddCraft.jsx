@@ -60,7 +60,7 @@ const AddCraft = () => {
 
   return (
     <div>
-      <div className="bg-gray-200 p-4">
+      <div className="bg-gray-200 p-4 md:w-2/3 mx-auto rounded-t-md">
         <h2 className="text-3xl text-center font-extrabold my-4">
           Add a Craft Item
         </h2>
@@ -80,18 +80,20 @@ const AddCraft = () => {
                 />
               </label>
             </div>
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
                 <span className="label-text">Subcategory Name</span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="subcategory_name"
-                  placeholder="subcategory name"
-                  className="input input-bordered w-full"
-                />
-              </label>
+              <select name="subcategory_name" className="rounded-md">
+                <option value="Landscape Painting">Landscape Painting</option>
+                <option value="Portrait Drawing">Portrait Drawing</option>
+                <option value="Watercolour Painting">
+                  Watercolour Painting
+                </option>
+                <option value="Oil Painting">Oil Painting</option>
+                <option value="Charcoal Sketching">Charcoal Sketching</option>
+                <option value="Cartoon Drawing">Cartoon Drawing</option>
+              </select>
             </div>
           </div>
           {/* form item name and sub category name row */}
@@ -108,17 +110,17 @@ const AddCraft = () => {
                 cols="50"
               ></textarea>
             </div>
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 md:ml-4">
               <label className="label">
                 <span className="label-text">Stock Status</span>
               </label>
               <select name="stock_status" className="rounded-md">
                 <option value="In stock">In stock</option>
                 <option
-                  value="Made to Order
+                  value="Out of stock
 "
                 >
-                  Made to Order
+                  Out of stock
                 </option>
               </select>
             </div>
@@ -131,7 +133,7 @@ const AddCraft = () => {
               </label>
               <label className="input-group">
                 <input
-                  type="text"
+                  type="number"
                   name="price"
                   placeholder="price"
                   className="input input-bordered w-full"
@@ -157,7 +159,7 @@ const AddCraft = () => {
               </label>
               <label className="input-group">
                 <input
-                  type="datetime-local"
+                  type="number"
                   name="processing_time"
                   placeholder="processing time"
                   className="input input-bordered w-full"

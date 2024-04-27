@@ -11,6 +11,7 @@ import AuthProvider from "./Providers/AuthProvider";
 import Login from "./Components/Pages/Login";
 import AddCraft from "./Components/AddCraft";
 import MyCraft from "./Components/Pages/MyCraft";
+import ViewDetails from "./Components/Pages/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
+        // loader: () => fetch("localhost:5000/craft"),
       },
       {
         path: "/register",
@@ -38,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "/my-craft",
         element: <MyCraft></MyCraft>,
+      },
+      {
+        path: "/view-details/:_id",
+        element: <ViewDetails></ViewDetails>,
+        loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
       },
     ],
   },

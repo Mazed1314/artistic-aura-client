@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import Craft from "../Craft";
 import MyCraftCard from "../MyCraftCard";
 
 const MyCraft = () => {
@@ -16,7 +15,7 @@ const MyCraft = () => {
   }, [user]);
 
   return (
-    <div className="flex flex-grow gap-4 justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
       {item < 1 ? (
         <h2>You have no Craft Now</h2>
       ) : (
@@ -26,26 +25,8 @@ const MyCraft = () => {
               <MyCraftCard craft={craft}></MyCraftCard>
             </>
           ))}
-          ;
         </>
       )}
-
-      {/* {(() => {
-        if (item < 1) {
-          return <h2>MY art & craft list</h2>;
-        } else {
-          return (
-            <>
-              {item?.map((craft) => (
-                <>
-                  <Craft craft={craft}></Craft>
-                </>
-              ))}
-              ;
-            </>
-          );
-        }
-      })()} */}
     </div>
   );
 };

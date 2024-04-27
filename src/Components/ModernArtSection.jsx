@@ -1,14 +1,13 @@
 const ModernArtSection = () => {
+  const img_1 = "../../public/images/blog01.webp";
+  const img_2 = "../../public/images/blog02.webp";
+  const img_3 = "../../public/images/blog03.webp";
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-8 py-4">
         <div className="p-2 md:w-96 bg-transparent">
           <figure>
-            <img
-              className="h-[400px] md:h-[500px]"
-              src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog01.jpg?v=1658894859"
-              alt=""
-            />
+            <img className="h-[400px] md:h-[500px]" src={img_1} alt="" />
           </figure>
           <div className=" card-body text-white bg-orange-400">
             <h2 className="text-4xl pb-4">Impressionism Art</h2>
@@ -17,11 +16,7 @@ const ModernArtSection = () => {
         </div>
         <div className="p-2 md:w-96 bg-transparent">
           <figure>
-            <img
-              className="h-[400px] md:h-[500px]"
-              src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog02.jpg?v=1658894883"
-              alt=""
-            />
+            <img className="h-[400px] md:h-[500px]" src={img_2} alt="" />
           </figure>
           <div className=" card-body text-white bg-red-800">
             <h2 className="text-4xl pb-4">Expressionism Art</h2>
@@ -30,11 +25,7 @@ const ModernArtSection = () => {
         </div>
         <div className="p-2 md:w-96 bg-transparent">
           <figure>
-            <img
-              className="h-[400px] md:h-[500px]"
-              src="https://dt-monaliza.myshopify.com/cdn/shop/files/blog03.jpg?v=1658894897"
-              alt=""
-            />
+            <img className="h-[400px] md:h-[500px]" src={img_3} alt="" />
           </figure>
           <div className=" card-body text-white bg-cyan-500">
             <h2 className="text-4xl pb-4">Abstract Art</h2>
