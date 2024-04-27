@@ -70,7 +70,7 @@ const Register = () => {
             Please Register here
           </h1>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl my-2 bg-base-100">
+        <div className="card shrink-0 w-full max-w-sm border border-pink-800 shadow-2xl my-2 bg-base-100">
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -80,7 +80,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 placeholder="name"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800"
                 required
               />
             </div>
@@ -92,7 +92,7 @@ const Register = () => {
                 type="text"
                 name="photoURL"
                 placeholder="Photo link"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800"
                 required
               />
             </div>
@@ -104,7 +104,7 @@ const Register = () => {
                 type="text"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800"
                 required
               />
             </div>
@@ -116,21 +116,27 @@ const Register = () => {
                 type={show ? "password" : "text"}
                 name="password"
                 placeholder="password"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800"
                 required
               />
               <span
                 onClick={() => setShow(!show)}
                 className="absolute top-12 right-2"
               >
-                {show ? <FaRegEyeSlash /> : <FaRegEye />}
+                {show ? (
+                  <FaRegEyeSlash className="text-xl text-pink-800" />
+                ) : (
+                  <FaRegEye className="text-xl text-pink-800" />
+                )}
               </span>
             </div>
             {registerError && (
               <p className="text-yellow-500">{registerError}</p>
             )}
             <div className="form-control mt-6">
-              <button className="btn bg-sky-400 text-white">Register</button>
+              <button className="btn bg-pink-800 text-xl text-white">
+                Register
+              </button>
             </div>
           </form>
           <ToastContainer />
@@ -138,7 +144,7 @@ const Register = () => {
           <p className="text-center px-2">
             Allready have an account ? please
             <Link to="/login">
-              <button className="btn btn-active text-sky-500 btn-link">
+              <button className="btn btn-active text-pink-800 btn-link">
                 Login
               </button>
             </Link>

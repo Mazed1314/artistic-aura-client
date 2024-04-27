@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  
   const { register, handleSubmit } = useForm();
 
   const { signInUser, signInWithGoogle, signInWithGitHub } =
@@ -49,27 +48,6 @@ const Login = () => {
         notifyGitError();
       });
   };
-  // const handleLogin = (e) => {
-  //   e.preventDefault();
-  //   const email = e.target.email.value;
-  //   const password = e.target.password.value;
-  //   console.log(email, password);
-
-  //   signInUser(email, password)
-  //     .then((userCredential) => {
-  //       console.log(userCredential.user);
-  //       e.target.reset();
-  //       // navigate(from);
-
-  //       const notifyLogin = () => toast.success("Successfully Login");
-  //       notifyLogin();
-  //     })
-  //     .catch((error) => {
-  //       console.error(error.message);
-  //       const notify = () => toast.error("Wrong email or password");
-  //       notify();
-  //     });
-  // };
 
   const onSubmit = (data) => {
     const { email, password } = data;
@@ -77,7 +55,7 @@ const Login = () => {
     signInUser(email, password)
       .then((userCredential) => {
         console.log(userCredential.user);
-        // e.target.reset();
+
         // navigate(from);
 
         const notifyLogin = () => toast.success("Successfully Login");
@@ -99,7 +77,7 @@ const Login = () => {
         <div className="text-center">
           <h1 className="text-2xl md:text-5xl font-bold">Login now!</h1>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card border contrast-125  border-pink-800 drop-shadow-2xl mb-4 shrink-0 w-full max-w-sm  bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body pb-0">
             <div className="form-control">
               <label className="label">
@@ -109,7 +87,7 @@ const Login = () => {
                 type="text"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800 "
                 {...register("email", { required: true })}
               />
             </div>
@@ -121,14 +99,18 @@ const Login = () => {
                 type={show ? "password" : "text"}
                 name="password"
                 placeholder="password"
-                className="input input-bordered"
+                className="input input-bordered border-pink-800 "
                 {...register("password", { required: true })}
               />
               <span
                 onClick={() => setShow(!show)}
                 className="absolute top-12 right-2"
               >
-                {show ? <FaRegEyeSlash /> : <FaRegEye />}
+                {show ? (
+                  <FaRegEyeSlash className="text-xl text-pink-800" />
+                ) : (
+                  <FaRegEye className="text-xl text-pink-800" />
+                )}
               </span>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
@@ -137,14 +119,16 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-sky-400 text-white">Login</button>
+              <button className="btn bg-pink-800 text-xl text-white">
+                Login
+              </button>
             </div>
           </form>
           <ToastContainer />
           <p className="text-center">
             New here ? Please{" "}
             <Link to="/register">
-              <button className="btn btn-active btn-link text-sky-500">
+              <button className="btn btn-active btn-link text-pink-800">
                 Register
               </button>
             </Link>

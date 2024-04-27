@@ -1,6 +1,7 @@
 import CraftItemSection from "../CraftItemSection";
 import ModernArtSection from "../ModernArtSection";
 import PopulerArtSection from "../PopulerArtSection";
+import Slide from "../Slide";
 
 const Home = () => {
   return (
@@ -11,10 +12,16 @@ const Home = () => {
             Being creative is not a hobby, it is a way of life for every artist
           </h2>
         </div>
-        Banner section
+        {/* Banner section */}
+        <Slide></Slide>
       </div>
       <div className="">
         {/* Craft items section */}
+        <div className="flex justify-center my-8">
+          <span className="py-2 rounded-3xl px-4 text-white bg-pink-800 border-rounded text-xl md:text-3xl font-semibold">
+            Crafts
+          </span>
+        </div>
         <CraftItemSection></CraftItemSection>
       </div>
       <div className="">Art & Craft Categories Section</div>

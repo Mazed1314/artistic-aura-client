@@ -21,7 +21,9 @@ const Navbar = () => {
       <ToastContainer />
       <NavLink
         className={({ isActive }) =>
-          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
+          isActive
+            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800 font-bold"
+            : "font-bold text-pink-800"
         }
         to="/"
       >
@@ -30,7 +32,9 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
+          isActive
+            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800 font-bold"
+            : "font-bold text-pink-800"
         }
         to="/add-craft"
       >
@@ -40,7 +44,9 @@ const Navbar = () => {
         <>
           <NavLink
             className={({ isActive }) =>
-              isActive ? "border-b-4 pb-2 border-black  font-bold" : "font-bold"
+              isActive
+                ? "border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
+                : "font-bold text-pink-800"
             }
             to="/my-craft"
           >
@@ -50,7 +56,9 @@ const Navbar = () => {
       )}
       <NavLink
         className={({ isActive }) =>
-          isActive ? "md:border-b-4 pb-2 border-black  font-bold" : "font-bold"
+          isActive
+            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
+            : "font-bold text-pink-800"
         }
         to="/about"
       >
@@ -58,7 +66,9 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "md:border-b-4 pb-2 border-black  font-bold" : "font-bold"
+          isActive
+            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
+            : "font-bold text-pink-800"
         }
         to="/contact"
       >
@@ -95,7 +105,7 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="">
-            <img src="" className="w-48" alt="" />
+            <img src="" className="w-48" alt="" /> Aura
           </a>
         </div>
         <div className="navbar-center hidden md:flex">
@@ -143,13 +153,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="btn border-orange-500 bg-transparent text-black btn-xs md:btn-sm mr-2"
+                className="btn border-pink-800 bg-transparent text-black btn-xs md:btn-sm mr-2"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn border-rose-500 text-black bg-transparent btn-xs md:btn-sm"
+                className="btn border-black text-black bg-transparent btn-xs md:btn-sm"
               >
                 Register
               </Link>

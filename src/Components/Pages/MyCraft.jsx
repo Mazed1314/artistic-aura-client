@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import MyCraftCard from "../MyCraftCard";
+import { useNavigate } from "react-router-dom";
 
 const MyCraft = () => {
+  const Navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
   // console.log(user);
@@ -15,16 +17,32 @@ const MyCraft = () => {
   }, [user]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
+    <div>
       {item < 1 ? (
-        <h2>You have no Craft Now</h2>
+        <div className="border h-96 flex flex-col justify-center">
+          <h2 className="text-center mt-3 text-2xl font-semibold text-gray-800  md:text-3xl">
+            Oops
+          </h2>
+          <h2 className="text-center text-3xl">You have no Craft Now !</h2>
+          <p className="mt-4 text-gray-500 text-center mb-2">For Add Craft</p>
+          <div className="flex justify-center">
+            <button
+              className="bg-white btn btn-sm text-pink-800 border border-pink-800 px-2 rounded-lg"
+              onClick={() => Navigate("/add-craft")}
+            >
+              Add Craft
+            </button>
+          </div>
+        </div>
       ) : (
         <>
-          {item?.map((craft) => (
-            <>
-              <MyCraftCard craft={craft}></MyCraftCard>
-            </>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
+            {item?.map((craft) => (
+              <>
+                <MyCraftCard craft={craft}></MyCraftCard>
+              </>
+            ))}
+          </div>
         </>
       )}
     </div>
