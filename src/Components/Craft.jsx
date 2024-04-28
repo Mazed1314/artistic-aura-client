@@ -1,28 +1,20 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 const Craft = ({ craft }) => {
-  const {
-    _id,
-    item_name,
-
-    short_description,
-  } = craft;
+  const { _id, item_name, photo, short_description } = craft;
   return (
     <div className="">
-      <div className="rounded md:w-60 glass">
+      <div className="rounded border md:w-60 glass">
         <figure>
-          <img
-            src="../../public/images/alexander-krivitskiy-4XOJGHd4kUY-unsplash.jpg"
-            alt="image"
-          />
+          <img src={photo} alt="image" className="w-full h-[200px]" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{item_name}</h2>
           <p>{short_description.slice(0, 100)}...</p>
-          <div className="card-actions justify-end">
+          <div className="card-actions justify-center">
             <NavLink
               to={`/view-details/${_id}`}
-              className="btn rounded text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              className="btn btn-sm mt-2 rounded text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
             >
               View Details
             </NavLink>

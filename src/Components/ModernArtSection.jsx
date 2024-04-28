@@ -4,8 +4,8 @@ const ModernArtSection = () => {
   const img_3 = "/images/blog03.webp";
   return (
     <div>
-      <div className="flex flex-col md:flex-row gap-8 py-4">
-        <div className="p-2 md:w-96 bg-transparent">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-4">
+        <div className="p-2 lg:w-96 bg-transparent">
           <figure>
             <img className="h-[400px] md:h-[500px]" src={img_1} alt="" />
           </figure>
@@ -14,7 +14,7 @@ const ModernArtSection = () => {
             <p>By George</p>
           </div>
         </div>
-        <div className="p-2 md:w-96 bg-transparent">
+        <div className="p-2 lg:w-96 bg-transparent">
           <figure>
             <img className="h-[400px] md:h-[500px]" src={img_2} alt="" />
           </figure>
@@ -23,7 +23,7 @@ const ModernArtSection = () => {
             <p>By Antony</p>
           </div>
         </div>
-        <div className="p-2 md:w-96 bg-transparent">
+        <div className="p-2 lg:w-96 bg-transparent">
           <figure>
             <img className="h-[400px] md:h-[500px]" src={img_3} alt="" />
           </figure>

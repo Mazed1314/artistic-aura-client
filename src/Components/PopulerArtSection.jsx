@@ -9,7 +9,7 @@ const PopulerArtSection = () => {
       <div className="flex flex-col md:flex-row gap-8 justify-center mb-4">
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img src={img_1} alt="Shoes" />
+            <img src={img_1} alt="image" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Fantasy Art</h2>
@@ -23,7 +23,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img src={img_2} alt="Shoes" />
+            <img src={img_2} alt="image" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Dragon Art</h2>
@@ -37,7 +37,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img src={img_3} alt="Shoes" />
+            <img src={img_3} alt="image" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Impressionism Art</h2>
@@ -53,7 +53,7 @@ const PopulerArtSection = () => {
       <div className="flex flex-col md:flex-row gap-8 ">
         <div className="p-2  md:w-96 bg-transparent">
           <figure>
-            <img src={img_4} alt="Shoes" />
+            <img src={img_4} alt="image" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">ImageThink</h2>
@@ -67,7 +67,7 @@ const PopulerArtSection = () => {
         </div>
         <div className="p-2 md:w-96 bg-transparent">
           <figure>
-            <img src={img_5} alt="Shoes" />
+            <img src={img_5} alt="image" />
           </figure>
           <div className="md:pl-0 card-body">
             <h2 className=" text-4xl">Fine Art Spot</h2>

@@ -1,3 +1,4 @@
+import CategorySection from "../CategorySection";
 import CraftItemSection from "../CraftItemSection";
 import ModernArtSection from "../ModernArtSection";
 import PopulerArtSection from "../PopulerArtSection";
@@ -18,16 +19,28 @@ const Home = () => {
       <div className="">
         {/* Craft items section */}
         <div className="flex justify-center my-8">
-          <span className="py-2 px-4 text-pink-800 bg-transparent border-y-4 border-pink-800 text-xl md:text-3xl font-semibold">
+          <span className="pt-1 pb-2 px-2 text-pink-800 bg-transparent border-y-4 border-pink-800 text-xl md:text-3xl font-semibold">
             Crafts
           </span>
         </div>
         <CraftItemSection></CraftItemSection>
       </div>
-      <div className="">Art & Craft Categories Section</div>
+      <div>
+        {/* Art & Craft Categories Section */}
+        <div className="flex justify-center my-8">
+          <span className="pt-1 pb-3 px-2 text-pink-800 bg-transparent border-y-4 border-pink-800 text-xl md:text-3xl font-semibold">
+            Categories
+          </span>
+        </div>
+        <div className="md:border-4 p-1 border-pink-800">
+          <div className="md:border-4 p-2 border-pink-800">
+            <CategorySection></CategorySection>
+          </div>
+        </div>
+      </div>
       <div className="">
         <div className="flex justify-end my-8">
-          <span className="py-2 rounded-s-3xl px-4 text-white bg-pink-800 border-l-rounded text-xl md:text-3xl font-semibold">
+          <span className="py-2  rounded-s-3xl px-4 text-white bg-pink-800 border-l-rounded text-xl md:text-3xl font-semibold">
             Populer This week
           </span>
         </div>

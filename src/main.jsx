@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
+        // loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
         // loader: () => fetch("localhost:5000/craft"),
       },
       {
