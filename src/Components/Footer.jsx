@@ -15,19 +15,17 @@ const Footer = () => {
               About Artistice Aura
             </h4>
             <p className="text-sm text-center">
-              Artistice Aura specializes in providing premium land real estate
-              solutions to our clients. With a focus on integrity and
-              professionalism, we strive to exceed expectations and deliver
-              exceptional service tailored to individual needs.
+              Artistic Aura is more than just a website; it's a celebration of
+              human expression. Our mission is to provide a space where artists
+              can showcase their talents, connect with like-minded individuals,
+              and inspire one another to push the boundaries of creativity.
             </p>
           </div>
           <div className="mb-8 text-center">
             <h4 className="text-lg font-semibold mb-4 text-center">
               Contact Us
             </h4>
-            <p className="text-sm">
-              2312 Artistice Street, Chittagong, Bangladesh
-            </p>
+            <p className="text-sm">2312 GSE Street, Chittagong, Bangladesh</p>
             <p className="text-sm">Email: Artistice@aura.com</p>
             <p className="text-sm">Phone: +123-456-7890</p>
           </div>

@@ -48,7 +48,7 @@ const ViewDetails = () => {
               </p>
               <p className="flex gap-1">
                 <IoPricetagsSharp className="text-pink-700 text-xl font-medium" />
-                <span className="text-gray-600 font-medium">{price}</span>
+                <span className="text-gray-600 font-medium">${price}</span>
                 <span className="text-gray-600 font-medium pl-2">
                   {stock_status}
                 </span>

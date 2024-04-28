@@ -21,9 +21,7 @@ const Navbar = () => {
       <ToastContainer />
       <NavLink
         className={({ isActive }) =>
-          isActive
-            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800 font-bold"
-            : "font-bold text-pink-800"
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
         }
         to="/"
       >
@@ -32,9 +30,7 @@ const Navbar = () => {
 
       <NavLink
         className={({ isActive }) =>
-          isActive
-            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800 font-bold"
-            : "font-bold text-pink-800"
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
         }
         to="/add-craft"
       >
@@ -44,9 +40,7 @@ const Navbar = () => {
         <>
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
-                : "font-bold text-pink-800"
+              isActive ? "border-b-4 pb-2 border-black font-bold" : "font-bold"
             }
             to="/my-craft"
           >
@@ -56,9 +50,23 @@ const Navbar = () => {
       )}
       <NavLink
         className={({ isActive }) =>
-          isActive
-            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
-            : "font-bold text-pink-800"
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
+        }
+        to="/all-craft"
+      >
+        All Art & craft
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
+        }
+        to="/blog"
+      >
+        Blog
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
         }
         to="/about"
       >
@@ -66,9 +74,7 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive
-            ? "md:border-b-4 pb-2 text-pink-800 border-pink-800  font-bold"
-            : "font-bold text-pink-800"
+          isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold "
         }
         to="/contact"
       >
@@ -105,7 +111,11 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="">
-            <img src="" className="w-48" alt="" /> Aura
+            <img
+              src="/images/Artistic-removebg-preview.png"
+              className="w-full h-12"
+              alt=""
+            />
           </a>
         </div>
         <div className="navbar-center hidden md:flex">

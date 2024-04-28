@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const handleAddCraft = (event) => {
     event.preventDefault();
 
@@ -37,7 +38,6 @@ const AddCraft = () => {
     };
 
     console.log(addNewItem);
-
     // send data to the server
     fetch("https://artistic-aura-server.vercel.app/addCraft", {
       method: "POST",
@@ -56,6 +56,7 @@ const AddCraft = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          navigate("/" || -1);
         }
       });
   };

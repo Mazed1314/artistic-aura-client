@@ -92,7 +92,7 @@ const MyCraftCard = ({ craft }) => {
 
         {/* Post image */}
         <div className="w-full">
-          <img width={400} height={200} src={photo} alt="Craft Image" />
+          <img src={photo} className="w-full h-60" alt="Craft Image" />
         </div>
 
         {/* Post content */}

@@ -19,7 +19,7 @@ const MyCraft = () => {
   return (
     <div>
       {item < 1 ? (
-        <div className="border h-96 flex flex-col justify-center">
+        <div className=" h-96 flex flex-col justify-center">
           <h2 className="text-center mt-3 text-2xl font-semibold text-gray-800  md:text-3xl">
             Oops
           </h2>
