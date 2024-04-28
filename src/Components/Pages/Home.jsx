@@ -18,7 +18,7 @@ const Home = () => {
       <div className="">
         {/* Craft items section */}
         <div className="flex justify-center my-8">
-          <span className="py-2 rounded-3xl px-4 text-white bg-pink-800 border-rounded text-xl md:text-3xl font-semibold">
+          <span className="py-2 px-4 text-pink-800 bg-transparent border-y-4 border-pink-800 text-xl md:text-3xl font-semibold">
             Crafts
           </span>
         </div>

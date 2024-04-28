@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
-import { MdDateRange, MdOutlinePriceCheck } from "react-icons/md";
-import { GiGunStock } from "react-icons/gi";
+import { MdOutlineStarHalf } from "react-icons/md";
+import { IoPricetagsSharp } from "react-icons/io5";
 
 const ViewDetails = () => {
   const cards = useLoaderData();
@@ -26,36 +26,42 @@ const ViewDetails = () => {
         </Helmet>
 
         <div className="w-full">
-          <img src={photo} alt="" className="w-full" />
+          <img src={photo} alt="" className="w-full h-[200px] lg:h-[500px]" />
         </div>
-        <h2 className="text-center font-bold text-2xl my-6 pt-8 rounded-t-md">
+        <h2 className="text-center font-bold text-2xl my-6 pt-4 rounded-t-md">
           {item_name}
+          {"("}
+          <span className="text-gray-600 text-md font-medium">
+            {subcategory_name}
+          </span>
+          {")"}
         </h2>
         <div className="px-2 md:px-8">
-          <div className="my-4 md:flex justify-start text-xl font-bold">
-            <p>
-              <MdDateRange />
-              {processing_time}
-              <span className="text-gray-600 font-medium">
-                {"rating icon"}{" "}
+          <div className="mt-4 flex justify-between">
+            <div className="md:flex justify-start gap-3">
+              <p>
+                processing_time:{" "}
+                <span className="font-semibold text-gray-500">
+                  {processing_time}
+                </span>{" "}
+                h
+              </p>
+              <p className="flex gap-1">
+                <IoPricetagsSharp className="text-pink-700 text-xl font-medium" />
+                <span className="text-gray-600 font-medium">{price}</span>
+                <span className="text-gray-600 font-medium pl-2">
+                  {stock_status}
+                </span>
+              </p>
+            </div>
+            <div className="flex gap-1">
+              <span className="text-pink-700 text-2xl font-medium">
+                <MdOutlineStarHalf />
               </span>{" "}
-              <span className="font-normal">{rating}</span>
-            </p>
-            <p>
-              Icon
-              <span className="text-gray-600 font-medium">
-                {subcategory_name}
-              </span>
-            </p>
-            <p>
-              <GiGunStock />
-              <span className="text-gray-600 font-medium">{stock_status}</span>
-            </p>
-            <p>
-              <MdOutlinePriceCheck />{" "}
-              <span className="text-gray-600 font-medium">{price}</span>
-            </p>
+              <span className="font-semibold text-gray-500">{rating}</span>
+            </div>
           </div>
+          <h2 className="py-2">{customization}</h2>
           <div className="py-4 md:py-8 text-lg text-gray-600">
             {short_description}
           </div>

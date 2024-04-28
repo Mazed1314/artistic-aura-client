@@ -171,8 +171,8 @@ const AddCraft = () => {
                 <span className="label-text">Customization</span>
               </label>
               <select name="customization" className="rounded-md">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
+                <option value="Customized">Yes</option>
+                <option value="Un Customized">No</option>
               </select>
             </div>
           </div>

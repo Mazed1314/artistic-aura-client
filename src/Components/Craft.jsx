@@ -12,7 +12,7 @@ const Craft = ({ craft }) => {
       <div className="rounded md:w-60 glass">
         <figure>
           <img
-            src="https://dt-monaliza.myshopify.com/cdn/shop/files/grid05_9c76563b-22d5-4f80-bbd1-1aa9ed68b7b6.jpg?v=1658894831"
+            src="../../public/images/alexander-krivitskiy-4XOJGHd4kUY-unsplash.jpg"
             alt="image"
           />
         </figure>
