@@ -18,6 +18,8 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import AllCraft from "./Components/Pages/AllCraft";
 import Blog from "./Components/Blog";
+import Profile from "./Components/Pages/Profile";
+import EditProfile from "./Components/Pages/EditProfile";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyCraft></MyCraft>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/edit-user",
+        element: (
+          <PrivateRoute>
+            <EditProfile></EditProfile>
           </PrivateRoute>
         ),
       },

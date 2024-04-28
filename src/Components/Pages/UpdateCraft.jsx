@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const UpdateCraft = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   const craft = useLoaderData();
   const {
     _id,
@@ -65,6 +66,7 @@ const UpdateCraft = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          navigate(-1);
         }
       });
   };
