@@ -6,7 +6,7 @@ const CategorySection = () => {
   const img_5 = "/images/maxresdefault.jpg";
   const img_6 = "/images/chuttersnap-6tQ_sXnsYzM-unsplash.jpg";
   return (
-    <div className="md:w-9/12 md:my-16 mx-auto ">
+    <div className="lg:w-9/12 lg:my-16 mx-auto ">
       <div className="flex flex-col md:flex-row gap-8 justify-center mb-4">
         <div className=" bg-transparent shadow-2xl">
           <figure>
@@ -16,7 +16,7 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
             <h2 className="text-4xl">Landscape Painting</h2>
             <p className="py-3">
               {" "}
@@ -37,11 +37,12 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
-            <h2 className="text-4xl">Landscape Painting</h2>
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
+            <h2 className="text-4xl">Portrait Drawing</h2>
             <p className="py-3">
               {" "}
-              Mountain view canvas, Forest based Landscape painting, etc.
+              Pencil Sketch Portrait, Ink Outline Portrait, Acrylic Portrait
+              Canvas, etc.
             </p>
             <div className="">
               <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
@@ -58,11 +59,11 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
-            <h2 className="text-4xl">Landscape Painting</h2>
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
+            <h2 className="text-4xl">Watercolour Painting</h2>
             <p className="py-3">
               {" "}
-              Mountain view canvas, Forest based Landscape painting, etc.
+              Floral Watercolor Art, Animal Watercolor Portrait, etc.
             </p>
             <div className="">
               <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
@@ -81,11 +82,11 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
-            <h2 className="text-4xl">Landscape Painting</h2>
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
+            <h2 className="text-4xl"> Oil Painting</h2>
             <p className="py-3">
               {" "}
-              Mountain view canvas, Forest based Landscape painting, etc.
+              Realistic Oil Portrait, Abstract Oil Painting, etc.
             </p>
             <div className="">
               <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
@@ -102,11 +103,11 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
-            <h2 className="text-4xl">Landscape Painting</h2>
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
+            <h2 className="text-4xl">Charcoal Sketching</h2>
             <p className="py-3">
               {" "}
-              Mountain view canvas, Forest based Landscape painting, etc.
+              Figure Charcoal Sketch, Architectural Charcoal Drawing, etc.
             </p>
             <div className="">
               <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
@@ -123,11 +124,11 @@ const CategorySection = () => {
               alt="image"
             />
           </figure>
-          <div className="p-2 my-auto mb-0 flex flex-col items-center">
-            <h2 className="text-4xl">Landscape Painting</h2>
+          <div className="p-2 text-center mb-0 flex flex-col items-center">
+            <h2 className="text-4xl"> Cartoon Drawingg</h2>
             <p className="py-3">
               {" "}
-              Mountain view canvas, Forest based Landscape painting, etc.
+              Comic Strip Drawing, Superhero Cartoon Design, etc.
             </p>
             <div className="">
               <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">

@@ -4,7 +4,7 @@ const Craft = ({ craft }) => {
   const { _id, item_name, photo, short_description } = craft;
   return (
     <div className="">
-      <div className="rounded border md:w-60 glass">
+      <div className="rounded border h-full glass">
         <figure>
           <img src={photo} alt="image" className="w-full h-[200px]" />
         </figure>

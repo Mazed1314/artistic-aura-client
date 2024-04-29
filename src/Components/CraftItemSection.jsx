@@ -12,7 +12,7 @@ const CraftItemSection = () => {
       }}
       className="bg-no-repeat bg-cover min-h-screen p-2"
     >
-      <div className="w-2/3 mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-2 py-8 md:py-20">
+      <div className="md:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 py-8 md:py-20">
         {getCraft.slice(0, 6).map((craft) => (
           <>
             <Craft key={craft._id} craft={craft}></Craft>

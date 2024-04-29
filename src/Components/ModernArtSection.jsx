@@ -4,10 +4,10 @@ const ModernArtSection = () => {
   const img_3 = "/images/blog03.webp";
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-4">
+      <div className="flex flex-wrap gap-8 justify-center py-4">
         <div className="p-2 lg:w-96 bg-transparent">
           <figure>
-            <img className="h-[400px] md:h-[500px]" src={img_1} alt="" />
+            <img className="h-[400px] w-full md:h-[500px]" src={img_1} alt="" />
           </figure>
           <div className=" card-body text-white bg-orange-400">
             <h2 className="text-4xl pb-4">Impressionism Art</h2>
@@ -16,7 +16,7 @@ const ModernArtSection = () => {
         </div>
         <div className="p-2 lg:w-96 bg-transparent">
           <figure>
-            <img className="h-[400px] md:h-[500px]" src={img_2} alt="" />
+            <img className="h-[400px] w-full md:h-[500px]" src={img_2} alt="" />
           </figure>
           <div className=" card-body text-white bg-red-800">
             <h2 className="text-4xl pb-4">Expressionism Art</h2>
@@ -25,7 +25,7 @@ const ModernArtSection = () => {
         </div>
         <div className="p-2 lg:w-96 bg-transparent">
           <figure>
-            <img className="h-[400px] md:h-[500px]" src={img_3} alt="" />
+            <img className="h-[400px] w-full md:h-[500px]" src={img_3} alt="" />
           </figure>
           <div className=" card-body text-white bg-cyan-500">
             <h2 className="text-4xl pb-4">Abstract Art</h2>
