@@ -8,7 +8,6 @@ const MyCraft = () => {
   const Navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
-
   const [open, setOpen] = useState(false);
   const dropDownRef = useRef(null);
   const items = ["Customized", "Uncustomized"];

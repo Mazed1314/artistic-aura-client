@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -8,10 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-
+  const navigate = useNavigate();
   const { signInUser, signInWithGoogle, signInWithGitHub } =
     useContext(AuthContext);
   const [show, setShow] = useState("false");
@@ -19,12 +20,15 @@ const Login = () => {
   const handleGoogle = () => {
     signInWithGoogle()
       .then((userCredential) => {
-        console.log(userCredential.user);
-        const notifyGoogle = () => toast.success("Successfully Google Login");
-        notifyGoogle();
-        // if (userCredential.user) {
-        //   navigate(from);
-        // }
+        // console.log(userCredential.user);
+        if (userCredential.user) {
+          navigate(-1);
+          Swal.fire({
+            title: "Successfully Google Login!",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -37,9 +41,14 @@ const Login = () => {
     signInWithGitHub()
       .then((userCredential) => {
         console.log(userCredential.user);
-        // navigate(from);
-        const notifyGit = () => toast.success("Successfully Github Login");
-        notifyGit();
+        if (userCredential.user) {
+          navigate(-1);
+          Swal.fire({
+            title: "Successfully Github Login!",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -54,12 +63,15 @@ const Login = () => {
 
     signInUser(email, password)
       .then((userCredential) => {
-        console.log(userCredential.user);
-
-        // navigate(from);
-
-        const notifyLogin = () => toast.success("Successfully Login");
-        notifyLogin();
+        // console.log(userCredential.user);
+        if (userCredential.user) {
+          navigate(-1);
+          Swal.fire({
+            title: "Successfully Login!",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
       })
       .catch((error) => {
         console.error(error.message);

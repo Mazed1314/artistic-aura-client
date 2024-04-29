@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -26,8 +26,11 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        const notify = () => toast.success("Successfully log out");
-        notify();
+        Swal.fire({
+          title: "Successfully log out!",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
         console.log("user log out");
       })
 
@@ -35,7 +38,6 @@ const Navbar = () => {
   };
   const navLinks = (
     <>
-      <ToastContainer />
       <NavLink
         className={({ isActive }) =>
           isActive ? "md:border-b-4 pb-2 border-black font-bold" : "font-bold"
