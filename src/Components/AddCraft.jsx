@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -63,6 +64,9 @@ const AddCraft = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Add Craft</title>
+      </Helmet>
       <div className="bg-gray-200 p-4 md:w-2/3 mx-auto rounded-t-md">
         <h2 className="text-3xl text-center font-extrabold my-4">
           Add a Craft Item

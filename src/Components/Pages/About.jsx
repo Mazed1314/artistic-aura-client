@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="bg-pink-100 text-gray-600 font-medium p-4 rounded-t-md">
       <Helmet>
-        <title>Artistic Aura - About</title>
+        <title>About</title>
       </Helmet>
       <h2 className="text-center text-xl md:text-3xl my-2 text-pink-800">
         Welcome to Artistic Aura!

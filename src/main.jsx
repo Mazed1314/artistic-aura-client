@@ -14,12 +14,12 @@ import MyCraft from "./Components/Pages/MyCraft";
 import ViewDetails from "./Components/Pages/ViewDetails";
 import PrivateRoute from "./Components/PrivateRoute";
 import UpdateCraft from "./Components/Pages/UpdateCraft";
-import Contact from "./Components/Contact";
-import About from "./Components/About";
 import AllCraft from "./Components/Pages/AllCraft";
-import Blog from "./Components/Blog";
+import Blog from "./Components/Pages/Blog";
 import Profile from "./Components/Pages/Profile";
 import EditProfile from "./Components/Pages/EditProfile";
+import Contact from "./Components/Pages/Contact";
+import About from "./Components/Pages/About";
 
 const router = createBrowserRouter([
   {

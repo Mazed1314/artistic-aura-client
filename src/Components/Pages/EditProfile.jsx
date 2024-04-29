@@ -39,7 +39,7 @@ const EditProfile = () => {
     <div>
       <div className="hero md:min-h-screen bg-gray-50 rounded-t-md">
         <Helmet>
-          <title>Artistic Aura - Edit user</title>
+          <title>Edit user</title>
         </Helmet>
         <div className="hero-content flex-col">
           <div className="text-center">

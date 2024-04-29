@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div>
       <Helmet>
-        <title>Artistic Aura - Contact</title>
+        <title>Contact</title>
       </Helmet>
       <section className="py-6 rounded-t-md bg-pink-100 text-gray-600 font-medium">
         <div className="grid max-w-6xl md:min-h-screen grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">

@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div className="flex justify-center py-4 rounded-t-md bg-gray-50">
       <Helmet>
-        <title>Artistic Aura - Profile</title>
+        <title>Profile</title>
       </Helmet>
       <div className="relative flex flex-col justify-center max-w-sm p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img

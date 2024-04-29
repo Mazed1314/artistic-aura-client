@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const UpdateCraft = () => {
   const { user } = useContext(AuthContext);
@@ -73,6 +74,9 @@ const UpdateCraft = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Edit Craft</title>
+      </Helmet>
       <div className="bg-gray-200 p-4 md:w-2/3 mx-auto rounded-t-md">
         <h2 className="text-3xl text-center font-semibold my-4">Edit Item</h2>
         <form onSubmit={handleUpdateCraft}>

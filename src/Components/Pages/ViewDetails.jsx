@@ -22,15 +22,14 @@ const ViewDetails = () => {
     <div>
       <div className="mx-2 md:mx-20 bg-slate-50">
         <Helmet>
-          <title>Artistic Aura | Estate_details : {_id}</title>
+          <title>Craft details : {_id}</title>
         </Helmet>
 
         <div className="w-full">
           <img src={photo} alt="" className="w-full h-[200px] lg:h-[500px]" />
         </div>
         <h2 className="text-center font-bold text-2xl my-6 pt-4 rounded-t-md">
-          {item_name}
-          {"("}
+          {item_name} {"("}
           <span className="text-gray-600 text-md font-medium">
             {subcategory_name}
           </span>
@@ -43,7 +42,7 @@ const ViewDetails = () => {
                 processing_time:{" "}
                 <span className="font-semibold text-gray-500">
                   {processing_time}
-                </span>{" "}
+                </span>
                 h
               </p>
               <p className="flex gap-1">
@@ -58,11 +57,11 @@ const ViewDetails = () => {
               <span className="text-pink-700 text-2xl font-medium">
                 <MdOutlineStarHalf />
               </span>{" "}
-              <span className="font-semibold text-gray-500">{rating}</span>
+              <span className="font-bold text-gray-500">{rating}</span>
             </div>
           </div>
-          <h2 className="py-2">{customization}</h2>
-          <div className="py-4 md:py-8 text-lg text-gray-600">
+          <h2 className="py-2 font-semibold text-gray-500">{customization}</h2>
+          <div className="py-4 md:py-8 text-lg text-gray-500">
             {short_description}
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import CategorySection from "../CategorySection";
 import CraftItemSection from "../CraftItemSection";
 import ModernArtSection from "../ModernArtSection";
@@ -7,6 +8,9 @@ import Slide from "../Slide";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Artistic Aura </title>
+      </Helmet>
       <div className="">
         <div className="">
           <h2 className="p-4 py-8 md:w-2/3 mx-auto text-center md:text-start text-3xl md:text-5xl font-light">
@@ -19,7 +23,7 @@ const Home = () => {
       <div className="">
         {/* Craft items section */}
         <div className="flex justify-center my-8">
-          <span className="pt-1 pb-2 px-2 text-pink-800 bg-transparent text-3xl md:text-5xl font-semibold">
+          <span className="pt-10 pb-6 px-2 text-pink-800 bg-transparent text-5xl md:text-[100px] font-light">
             Crafts
           </span>
         </div>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
 import { GiPriceTag, GiTrashCan } from "react-icons/gi";
@@ -8,7 +8,7 @@ import { FaRegEdit } from "react-icons/fa";
 
 const MyCraftCard = ({ craft }) => {
   const { user } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const {
     _id,
     item_name,
@@ -42,13 +42,14 @@ const MyCraftCard = ({ craft }) => {
               Swal.fire("Deleted!", "Your craft has been deleted.", "success");
             }
           });
+        navigate("/my-craft");
       }
     });
   };
 
   return (
     <div>
-      <div className="mx-auto my-6 md:w-[350px] rounded font-sans border border-pink-800">
+      <div className="w-full h-full rounded font-sans border border-pink-800">
         <div className="flex justify-between py-4 px-2">
           <div className="flex">
             {/* Avatar image  */}
@@ -87,7 +88,9 @@ const MyCraftCard = ({ craft }) => {
             <GiPriceTag className="text-4xl pb-2 text-amber-400" />
             <span className="text-xl pl-2">{price} $</span>
           </div>
-          <h2>{stock_status}</h2>
+          <h2 className=" mb-2 font-bold border rounded-full text-pink-800 px-2 border-pink-800 pb-0">
+            {stock_status}
+          </h2>
         </div>
 
         {/* Post image */}
@@ -98,8 +101,14 @@ const MyCraftCard = ({ craft }) => {
         {/* Post content */}
         <div className="mt-3 space-y-2 px-4">
           <h2 className="text-xl font-semibold">{item_name}</h2>
-          <h2>Processing Time : {processing_time}h</h2>
-          <h2 className="text-sm py-2">
+          <h2>
+            <span className="font-semibold">Processing Time</span> :{" "}
+            <span className="text-slate-600 font-medium">
+              {processing_time}
+            </span>
+            h
+          </h2>
+          <h2 className="text-md py-2 text-slate-600">
             {short_description.slice(0, 150)}
             {"... "}
           </h2>

@@ -71,7 +71,7 @@ const Login = () => {
   return (
     <div className="hero md:min-h-screen bg-gray-50 rounded-t-md">
       <Helmet>
-        <title>Artistic Aura - Login</title>
+        <title>Login</title>
       </Helmet>
       <div className="hero-content flex-col">
         <div className="text-center">

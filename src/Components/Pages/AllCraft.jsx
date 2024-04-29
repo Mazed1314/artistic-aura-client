@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import { NavLink, useLoaderData } from "react-router-dom";
 
 const AllCraft = () => {
   const getCraft = useLoaderData();
   return (
     <div>
+      <Helmet>
+        <title>All Craft</title>
+      </Helmet>
       <div className="overflow-x-auto">
         <table className="min-w-[90%] shadow-md border mx-auto border-gray-100 my-6">
           <thead>
