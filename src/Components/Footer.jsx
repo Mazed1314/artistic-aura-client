@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-800 text-white py-12 pb-0 mx-0">
+    <footer className="border-t    border-gray-300 py-12 pb-0 mx-0">
       <div className="mx-auto px-2 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="mb-8">
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 text-white transition duration-300"
+                  className="hover:text-pink-800  transition duration-300"
                 >
                   <FaFacebookF />
                 </a>
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 text-white transition duration-300"
+                  className="hover:text-pink-800  transition duration-300"
                 >
                   <FaTwitter />
                 </a>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 text-white transition duration-300"
+                  className="hover:text-pink-800  transition duration-300"
                 >
                   <FaInstagram />
                 </a>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="hover:text-gray-300 text-white transition duration-300"
+                  className="hover:text-pink-800  transition duration-300"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-aut py-8 rounded-b-lg">
+      <div className="container border-t border-gray-300 mx-aut py-8 rounded-b-lg">
         <div className="flex justify-center">
           <p className="text-sm">
             &copy; 2024 Artistic Aura. All rights reserved.

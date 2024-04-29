@@ -67,7 +67,7 @@ const AddCraft = () => {
       <Helmet>
         <title>Add Craft</title>
       </Helmet>
-      <div className="bg-transparent border p-4 md:w-2/3 mx-auto rounded-t-md">
+      <div className="bg-transparent border shadow-2xl p-4 md:w-2/3 mx-auto rounded-t-md">
         <h2 className="text-3xl text-center font-extrabold my-4">
           Add a Craft Item
         </h2>

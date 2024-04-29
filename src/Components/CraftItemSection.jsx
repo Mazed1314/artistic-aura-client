@@ -3,8 +3,7 @@ import Craft from "./Craft";
 
 const CraftItemSection = () => {
   const getCraft = useLoaderData();
-  const bg_img =
-    "/images/Pink-White-And-Purple-Swirls-Oil-Painting-55284785-1.png";
+  const bg_img = "/images/pawel-czerwinski-qztBRIrU1FM-unsplash.jpg";
   return (
     <div
       style={{

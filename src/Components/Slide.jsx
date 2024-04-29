@@ -8,8 +8,8 @@ const Slide = () => {
   const img_1 = "/images/grid01_f082623b-bb96-43a2-811f-854fbc047902.webp";
   const img_2 = "/images/blog05_770x.webp";
   const img_3 = "/images/blog_detail_monoliza-5.webp";
-  const img_4 = "/images/oil_Oainting_11.png";
-  const img_5 = "/images/grid02.webp";
+  // const img_4 = "/images/oil_Oainting_11.png";
+  const img_5 = "/images/daniele-fasoli-sNQMXw8wT5U-unsplash.jpg";
   return (
     <div>
       <Swiper
@@ -57,13 +57,13 @@ const Slide = () => {
             alt="slider_4"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
             className="w-full h-[400px] lg:h-[700px]"
             src={img_4}
             alt="slider_4"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <img
             className="w-full h-[400px] lg:h-[700px]"

@@ -4,6 +4,7 @@ import CraftItemSection from "../CraftItemSection";
 import ModernArtSection from "../ModernArtSection";
 import PopulerArtSection from "../PopulerArtSection";
 import Slide from "../Slide";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Home = () => {
   return (
@@ -57,6 +58,22 @@ const Home = () => {
           </span>
         </div>
         <ModernArtSection></ModernArtSection>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full justify-around my-12 py-12">
+        <h2 className="text-xl text-center md:text-5xl ">
+          Sign Up For Latest News
+        </h2>
+        <label className="pl-4 border border-gray-400  flex items-center gap-2">
+          <input
+            type="text"
+            className="grow py-2"
+            placeholder="Your email address"
+          />
+          <span className="badge bg-transparent text-gray-400 btn btn-sm badge-info ml-2">
+            Sign Up
+            <IoIosArrowRoundForward className="text-2xl" />
+          </span>
+        </label>
       </div>
     </div>
   );
