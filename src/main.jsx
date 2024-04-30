@@ -20,6 +20,7 @@ import Profile from "./Components/Pages/Profile";
 import EditProfile from "./Components/Pages/EditProfile";
 import Contact from "./Components/Pages/Contact";
 import About from "./Components/Pages/About";
+import CategoryCraft from "./Components/Pages/CategoryCraft";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/category-craft",
+        element: (
+          <PrivateRoute>
+            <CategoryCraft></CategoryCraft>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/profile",
         element: (
           <PrivateRoute>
@@ -89,6 +98,16 @@ const router = createBrowserRouter([
         loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
       },
       {
+        path: "details/:_id",
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch("https://artistic-aura-server.vercel.app/categoryCraft"),
+      },
+      {
         path: "/all-craft",
         element: <AllCraft></AllCraft>,
         loader: () => fetch("https://artistic-aura-server.vercel.app/craft"),
@@ -118,3 +137,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </AuthProvider>
   </React.StrictMode>
 );
+
+// app.get("/categoryCraft/:category", async (req, res) => {
+//   console.log(req.params.category);
+//   const result = await craftCategoryCollection
+//     .find({ category: req.params.category })
+//     .toArray();
+//   res.send(result);
+// });

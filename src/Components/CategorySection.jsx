@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const CategorySection = () => {
   const img_1 = "/images/MA305200-1024x698.jpg";
   const img_2 = "/images/alexander-krivitskiy-4XOJGHd4kUY-unsplash.jpg";
@@ -23,9 +25,12 @@ const CategorySection = () => {
               Mountain view canvas, Forest based Landscape painting, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -45,9 +50,12 @@ const CategorySection = () => {
               Canvas, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -66,9 +74,12 @@ const CategorySection = () => {
               Floral Watercolor Art, Animal Watercolor Portrait, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -89,9 +100,12 @@ const CategorySection = () => {
               Realistic Oil Portrait, Abstract Oil Painting, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -110,9 +124,12 @@ const CategorySection = () => {
               Figure Charcoal Sketch, Architectural Charcoal Drawing, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -131,9 +148,12 @@ const CategorySection = () => {
               Comic Strip Drawing, Superhero Cartoon Design, etc.
             </p>
             <div className="">
-              <button className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white">
+              <NavLink
+                to="/category-craft"
+                className="btn btn-sm rounded-none text-pink-700 border-pink-900 bg-transparent hover:bg-pink-900 hover:text-white"
+              >
                 View Category
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>

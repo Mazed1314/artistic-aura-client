@@ -3,6 +3,7 @@ import Craft from "./Craft";
 
 const CraftItemSection = () => {
   const getCraft = useLoaderData();
+  console.log(getCraft);
   const bg_img = "/images/pawel-czerwinski-qztBRIrU1FM-unsplash.jpg";
   return (
     <div
