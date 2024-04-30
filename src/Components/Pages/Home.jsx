@@ -5,8 +5,15 @@ import ModernArtSection from "../ModernArtSection";
 import PopulerArtSection from "../PopulerArtSection";
 import Slide from "../Slide";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Home = () => {
+  const [text] = useTypewriter({
+    words: ["Hobby", "Passion", "Pursuit"],
+    loop: {},
+    typeSpeed: 280,
+    delaySpeed: 80,
+  });
   return (
     <div>
       <Helmet>
@@ -15,7 +22,13 @@ const Home = () => {
       <div className="">
         <div className="">
           <h2 className="p-4 py-8 md:w-2/3 mx-auto text-center md:text-start text-3xl md:text-5xl font-light">
-            Being creative is not a hobby, it is a way of life for every artist
+            Being creative <br />
+            is not just a{" "}
+            <span className="text-pink-700 font-medium text-5xl">{text}</span>
+            <span>
+              <Cursor></Cursor>
+            </span>
+            ,<br /> it is a way of life for every artist
           </h2>
         </div>
         {/* Banner section */}
