@@ -83,10 +83,10 @@ const MyCraftCard = ({ craft }) => {
             </span>
           </div>
         </div>
-        <div className="flex justify-between px-2">
+        <div className="flex justify-between px-2 py-2">
           <div className="flex">
-            <GiPriceTag className="text-4xl pb-2 text-amber-400" />
-            <span className="text-xl pl-2">{price} $</span>
+            <GiPriceTag className="text-3xl text-amber-400" />
+            <span className="text-xl pl-1">{price} $</span>
           </div>
           <h2 className=" mb-2 font-bold border rounded-full text-pink-800 px-2 border-pink-800 pb-0">
             {stock_status}

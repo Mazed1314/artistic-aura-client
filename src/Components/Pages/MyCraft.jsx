@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import MyCraftCard from "../MyCraftCard";
 import { useNavigate } from "react-router-dom";
@@ -8,19 +8,6 @@ const MyCraft = () => {
   const Navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const [item, setItem] = useState([]);
-  const [open, setOpen] = useState(false);
-  const dropDownRef = useRef(null);
-  const items = ["Customized", "Uncustomized"];
-
-  useEffect(() => {
-    const close = (e) => {
-      if (dropDownRef.current && !dropDownRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", close);
-    return () => document.removeEventListener("mousedown", close);
-  }, []);
   // console.log(user);
   useEffect(() => {
     fetch(`https://artistic-aura-server.vercel.app/myCraft/${user?.email}`)
@@ -53,34 +40,6 @@ const MyCraft = () => {
         </div>
       ) : (
         <>
-          <div ref={dropDownRef} className="relative mx-auto w-fit text-white">
-            <button
-              onClick={() => setOpen((prev) => !prev)}
-              className="rounded-sm bg-pink-600 px-6 py-2"
-            >
-              Filter
-            </button>
-            <ul
-              className={`${
-                open ? "visible" : "invisible"
-              } absolute top-12 z-50 w-full space-y-1 rounded-sm shadow-md`}
-            >
-              {items.map((item, idx) => (
-                <li
-                  key={idx}
-                  className={`rounded-sm bg-pink-400 p-2 ${
-                    open ? "opacity-100 duration-500" : "opacity-0 duration-150"
-                  } hover:bg-pink-500`}
-                  style={{
-                    transform: `translateY(${open ? 0 : (idx + 1) * 10}px)`,
-                  }}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 my-6">
             {/* dropdown */}
 
