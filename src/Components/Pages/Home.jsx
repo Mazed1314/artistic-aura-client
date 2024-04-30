@@ -6,6 +6,7 @@ import PopulerArtSection from "../PopulerArtSection";
 import Slide from "../Slide";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const [text] = useTypewriter({
@@ -21,15 +22,22 @@ const Home = () => {
       </Helmet>
       <div className="">
         <div className="">
-          <h2 className="p-4 py-8 md:w-2/3 mx-auto text-center md:text-start text-3xl md:text-5xl font-light">
-            Being creative <br />
-            is not just a{" "}
-            <span className="text-pink-700 font-medium text-5xl">{text}</span>
-            <span>
-              <Cursor></Cursor>
-            </span>
-            ,<br /> it is a way of life for every artist
-          </h2>
+          <div className="p-4 space-y-2 py-8 md:w-2/3 mx-auto text-center md:text-start text-3xl md:text-5xl font-light">
+            <Fade direction="down">
+              <h2 className="">Being creative </h2>
+            </Fade>
+            <h2>
+              is not just a{" "}
+              <span className="text-pink-700 font-normal text-5xl">{text}</span>
+              <span>
+                <Cursor></Cursor>,
+              </span>
+            </h2>
+
+            <Fade direction="up">
+              <h2>it is a way of life for every artist</h2>
+            </Fade>
+          </div>
         </div>
         {/* Banner section */}
         <Slide></Slide>

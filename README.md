@@ -44,3 +44,5 @@ Dependencies/Packages :
     - react-toastify(^10.0.5),
     - sort-by(^1.2.0),
     - swiper(^11.1.1)
+    - react-simple-typewriter(^5.0.1)
+    - react-awesome-reveal(^4.2.8)
