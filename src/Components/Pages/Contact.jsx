@@ -6,7 +6,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact</title>
       </Helmet>
-      <section className="py-6 rounded-t-md bg-pink-100 text-gray-600 font-medium">
+      <section className="py-6 rounded-t-md bg-pink-100 text-gray-600 font-medium dark:bg-gray-800">
         <div className="grid max-w-6xl md:min-h-screen grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="py-6 md:py-0 md:px-6">
             <h1 className="text-4xl font-bold text-pink-800">Get in touch</h1>

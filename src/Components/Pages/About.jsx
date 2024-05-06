@@ -2,70 +2,153 @@ import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
-    <div className="bg-pink-100 text-gray-600 font-medium p-4 rounded-t-md">
+    <div className=" text-gray-600 p-4 rounded-t-md">
       <Helmet>
         <title>About</title>
       </Helmet>
       <h2 className="text-center text-xl md:text-3xl my-2 text-pink-800">
         Welcome to Artistic Aura!
       </h2>
-      <div className=" md:w-8/12 mx-auto">
-        <div className=" my-4">
-          <img src="/images/grid01.webp" className="w-full " alt="" />
+      <div className="">
+        <div className="my-4">
+          <img src="/images/" className="w-full " alt="" />
         </div>
-        <p>
+        <p className="text-center text-lg md:w-9/12 mx-auto">
           At Artistic Aura, we believe in the transformative power of
           creativity. Our platform serves as a sanctuary for artists and art
           enthusiasts alike, fostering a vibrant community where imagination
           knows no bounds.
         </p>
-        <br />
-        <p>
-          <h2 className="font-bold text-xl">Our Mission</h2>
+        <div className="flex flex-col md:flex-row my-20">
+          <div className="w-full md:w-1/2 my-4">
+            <img src="/images/grid01.webp" alt="" />
+          </div>
+          <div className="w-full md:w-1/2 text-center my-auto px-8">
+            <h2 className="font-medium text-xl md:text-2xl">
+              Acrylic Painting
+            </h2>
+            <p>
+              Acrylic painting: vibrant colors, quick-drying versatility.
+              Perfect for artists of all levels.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col-reverse md:flex-row my-20">
+          <div className="w-full md:w-1/2 text-center my-auto px-8">
+            <h2 className="font-medium text-xl md:text-2xl">
+              Watercolor Painting
+            </h2>
+            <p>
+              Watercolor painting: translucent layers, fluid beauty. Ideal for
+              landscapes and florals.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 my-4">
+            <img src="/images/grid02.webp" alt="" />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row my-20">
+          <div className="w-full md:w-1/2 my-4">
+            <img
+              src="/images/grid03.webp"
+              className="h-full w-full rounded-tl-[150px] rounded-b-[150px] hover:border-0"
+              alt=""
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-8">
+            <h2 className="py-1 text-3xl">Extremely Versatile</h2>
+            <p>
+              Acrylic painting: vibrant colors, quick-drying versatility.
+              Perfect for artists of all levels.
+            </p>
+            <div className="">
+              <div className="py-2">
+                {/* icon */}
+                <p>
+                  <h2 className="text-2xl py-1">Popular fine art</h2>
+                  Are you an artist looking for a platform to showcase your
+                  work? Or perhaps you're an art lover eager to connect with
+                  fellow enthusiasts?
+                </p>
+              </div>
+              <div className="py-3">
+                {/* icon */}
+                <p>
+                  <h2 className="text-2xl py-1">Online art exhibitions</h2>
+                  Are you an artist looking for a platform to showcase your
+                  work? Or perhaps you're an art lover eager to connect with
+                  fellow enthusiasts?
+                </p>
+              </div>
+              <div className="py-2">
+                {/* icon */}
+                <p>
+                  <h2 className="text-2xl py-1">Best art galleries</h2>
+                  Are you an artist looking for a platform to showcase your
+                  work? Or perhaps you're an art lover eager to connect with
+                  fellow enthusiasts?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p className="py-4">
+          <h2 className="font-semibold text-xl md:text-3xl">Our Mission</h2>
           Artistic Aura is more than just a website; it's a celebration of human
           expression. Our mission is to provide a space where artists can
           showcase their talents, connect with like-minded individuals, and
           inspire one another to push the boundaries of creativity.
         </p>
-        <br />
-        <p>
-          <h2 className="font-bold text-xl">What We Offer</h2>
-          Whether you're an established artist or just starting on your creative
-          journey, Artistic Aura has something for you. From captivating visual
-          art to stirring literary works, our platform features a diverse range
-          of artistic endeavors. Explore our galleries, read our articles, and
-          immerse yourself in the beauty of human imagination.
-        </p>
-        <br />
-        <p>
-          <h2 className="font-bold text-xl">Community Matters</h2>
-          At the heart of Artistic Aura is our vibrant community. We believe
-          that art has the power to bring people together, transcending
-          boundaries of culture, language, and geography. Join us in celebrating
-          diversity, fostering dialogue, and forging meaningful connections
-          through the universal language of creativity.
-        </p>
-        <br />
-        <p>
-          <h2 className="font-bold text-xl">Get Involved </h2>
+        <p className="py-4">
+          <h2 className="font-semibold text-xl md:text-3xl">Get Involved </h2>
           Are you an artist looking for a platform to showcase your work? Or
           perhaps you're an art lover eager to connect with fellow enthusiasts?
           Whatever your passion may be, we invite you to join the Artistic Aura
           community. Together, let's ignite the spark of inspiration and unleash
           the boundless potential of artistic expression.
         </p>{" "}
-        <br />
-        <p>
-          <h2 className="font-bold text-xl">Join Us</h2>
-          Whether you're here to create, explore, or simply be inspired, we're
-          thrilled to have you as part of the Artistic Aura family. Welcome to a
-          world where imagination knows no limits. Welcome to Artistic Aura.
-        </p>{" "}
-        <br />
-        <h2>Sincerely,</h2>
-        <h2>
-          Abdul Mazed <br /> Founder, Artistic Aura
-        </h2>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-6 justify-between my-12">
+        <div className="relative">
+          <img
+            src="images/team03_800x.webp"
+            className="w-[340px] h-[500px]"
+            alt=""
+          />
+          <div className="text-center text-white text-xl bg-pink-800 bg-opacity-50 absolute bottom-0 w-full py-2">
+            <h2>Lisha Edwin</h2>
+            <h2>
+              <i className="text-lg">Artist</i>
+            </h2>
+          </div>
+        </div>
+        <div className="relative">
+          <img
+            src="images/team02_800x.webp"
+            className="w-[340px] h-[500px]"
+            alt=""
+          />
+          <div className="text-center text-white text-xl bg-pink-800 bg-opacity-50 absolute bottom-0 w-full py-2">
+            <h2>James Watson</h2>
+            <h2>
+              <i className="text-lg">Manager</i>
+            </h2>
+          </div>
+        </div>
+        <div className="relative">
+          <img
+            src="images/team01_800x.webp"
+            className="w-[340px] h-[500px]"
+            alt=""
+          />
+          <div className="text-center text-white text-xl bg-pink-800 bg-opacity-50 absolute bottom-0 w-full py-2">
+            <h2>Lara</h2>
+            <h2>
+              <i className="text-lg">CEO</i>
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   );

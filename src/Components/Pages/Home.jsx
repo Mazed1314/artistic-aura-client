@@ -28,7 +28,9 @@ const Home = () => {
             </Fade>
             <h2>
               is not just a{" "}
-              <span className="text-pink-700 font-normal text-5xl">{text}</span>
+              <span className="text-pink-700 font-normal md:text-5xl">
+                {text}
+              </span>
               <span>
                 <Cursor></Cursor>,
               </span>
@@ -87,8 +89,8 @@ const Home = () => {
         <label className="pl-4 border border-gray-400  flex items-center gap-2">
           <input
             type="text"
-            className="grow py-2"
-            placeholder="Your email address"
+            className="grow py-2 bg-transparent"
+            placeholder="Your email address "
           />
           <span className="badge bg-transparent text-gray-400 btn btn-sm badge-info ml-2">
             Sign Up
